@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --mizan-olive: #4F6D3A;
+    --mizan-dark: #1C3122;
+    --mizan-cream: #F7F3EC;
+    --mizan-beige: #EFE8DA;
+    --mizan-gold: #C69C43;
+    --mizan-ink: #1C281E;
+    --mizan-muted: #5A665C;
+  }
+
+  html {
+    font-family: 'Cairo', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  html[dir="ltr"] {
+    font-family: 'Plus Jakarta Sans', 'Cairo', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: var(--mizan-cream);
+    color: var(--mizan-ink);
+    overflow-x: hidden;
+  }
+}
+
+.font-num {
+  font-family: 'IBM Plex Mono', 'Plus Jakarta Sans', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Clean PDF / Print output for Weekly Plans & Shopping Lists */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-break-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

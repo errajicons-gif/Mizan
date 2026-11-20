@@ -1,0 +1,8 @@
+{
+  "name": "MIZAN – ميزان",
+  "description": "منصة ذكية للتغذية المغربية الصحية — توازن في غذائك، صحة في حياتك",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
